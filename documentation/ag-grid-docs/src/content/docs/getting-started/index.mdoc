@@ -384,7 +384,7 @@ The `headerName` provides the title for the header. If missing the title is deri
 ```{% frameworkTransform=true %}
 const gridOptions = {
     columnDefs: [
-        { headerName: "Make & Model", valueGetter: p => p.make + ' ' + p.model},
+        { headerName: "Make & Model", valueGetter: ({ data }) => data.make + ' ' + data.model },
         { field: "price" },
     ],
 };
